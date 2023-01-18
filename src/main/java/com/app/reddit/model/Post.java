@@ -20,7 +20,7 @@ import static javax.persistence.FetchType.LAZY;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long postId;
     @NotBlank(message = "Post Name cannot be empty or Null")
     private String postName;
     @Nullable
@@ -30,10 +30,10 @@ public class Post {
     private String description;
     private Integer voteCount;
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "id")
+    @JoinColumn(name = "userId", referencedColumnName = "userId")
     private User user;
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "subredditId", referencedColumnName = "id")
+    @JoinColumn(name = "subredditId", referencedColumnName = "subredditId")
     private Subreddit subreddit;
     private Instant createdDate;
 }

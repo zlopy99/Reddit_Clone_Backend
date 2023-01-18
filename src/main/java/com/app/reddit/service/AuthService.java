@@ -11,6 +11,7 @@ import com.app.reddit.model.VerificationToken;
 import com.app.reddit.repo.UserRepo;
 import com.app.reddit.repo.VerificationTokenRepo;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
