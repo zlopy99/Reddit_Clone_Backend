@@ -1,5 +1,7 @@
 package com.app.reddit.model;
 
+import java.util.Arrays;
+
 public enum VoteType {
     UPVOTE(1), DOWNVOTE(-1),
     ;
@@ -9,7 +11,5 @@ public enum VoteType {
     VoteType(int direction) {
     }
 
-//    public static VoteType lookup(Integer direction) {
-//
-//    }
+
 }
