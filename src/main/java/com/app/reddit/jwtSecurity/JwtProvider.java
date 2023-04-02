@@ -63,6 +63,9 @@ public class JwtProvider {
     }
 
     public boolean validateToken(String jwt) {
+        if (jwt == null) {
+            return false;
+        }
         Jwts.parser().setSigningKey(getPublicKey()).parseClaimsJws(jwt);
         return true;
     }
